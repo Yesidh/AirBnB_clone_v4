@@ -11,4 +11,21 @@ header {
 	height: 70px;
 	width: 100%;
 	border-bottom: 1px solid #CCCCCC;
+	align-items: center;
+	display: flex;
+	justify-content: flex-end;
+}
+.enable {
+    height: 40px;
+    width: 40px;
+    background-color: #cccccc;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+.available {
+    height: 40px;
+    width: 40px;
+    background-color: #FF545F;
+    border-radius: 50%;
+    margin-right: 30px;
 }
