@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width">
     <title>Holberton AirBnB</title>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="/static/scripts/1-hbnb.js?{{ cache_id }}"></script>
+    <script src="/static/scripts/2-hbnb.js?{{ cache_id }}"></script>
     <!-- FAVICON -->
 
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/icon.png') }}">
@@ -36,6 +36,7 @@
 	 ********************** -->
 
     <header>
+      <div id="api_status" class="enable">
     </header>
     <main>
       <div class="container">
@@ -140,7 +141,7 @@
 	    <div class="user">
 
 	      <strong>Owner: {{ users[place.user_id] }}</strong>
-
+v
 	    </div>
 	    <div class="description">
 
@@ -161,6 +162,6 @@
     <footer>
       Holberton School
     </footer>
-   <!-- <script type="text/javascript" src="static/scripts/1-hbnb.js"></script> -->
+ <!--   <script type="text/javascript" src="static/scripts/2-hbnb.js"></script>-->
   </body>
 </html>

@@ -24,4 +24,9 @@ $(document).ready(function () {
   };
   countChecked();
   $( "input[type=checkbox]" ).on( "click", countChecked );
+  $.get('http://0.0.0.0:5001/api/v1/status/', function(data, textStatus) {
+    if(textStatus === 'success') {
+      $('#api_status').toggleClass('enable available');
+    }
+  });
 });
