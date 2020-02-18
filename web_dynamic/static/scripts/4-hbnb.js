@@ -85,7 +85,8 @@ $(document).ready(function () {
 
   // searchin the amenities checked by the user
   $('button').click(function () {
-    let dictToJson = JSON.stringify(countChecked());
+    let dictToJson = JSON.stringify({ amenities: countChecked()});
+      console.log('lista a buscar', dictToJson);
     $.ajax({
       url: 'http://localhost:5001/api/v1/places_search/',
       type: 'POST',
@@ -93,6 +94,7 @@ $(document).ready(function () {
       data: dictToJson,
       success: function (data, textStatus, jQxhr) {
 	$('.places').html('');
+	console.log(data);
         $.each(data, function (key, val) {
           $('.places').append(`
 			      <article>
