@@ -7,7 +7,7 @@ $(document).ready(function () {
   // function to show the amenities checked by the user
   const dict = {};
   const countChecked = function () {
-    if ($('.popover li input').prop('checked', true)) {
+    if ($('.popover li input').prop('checked'), true) {
       const id = $(this).attr('data-id');
       const name = $(this).attr('data-name');
       if (dict.hasOwnProperty(id)) {
@@ -85,13 +85,14 @@ $(document).ready(function () {
 
   // searchin the amenities checked by the user
   $('button').click(function () {
-    const dictToJson = JSON.stringify(countChecked());
+    let dictToJson = JSON.stringify(countChecked());
     $.ajax({
       url: 'http://localhost:5001/api/v1/places_search/',
       type: 'POST',
       contentType: 'application/json',
       data: dictToJson,
       success: function (data, textStatus, jQxhr) {
+	$('.places').html('');
         $.each(data, function (key, val) {
           $('.places').append(`
 			      <article>
